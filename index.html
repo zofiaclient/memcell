@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="styles/base.css">
+
+    <link rel="stylesheet" href="highlight/styles/github-dark.min.css">
+
+    <script src="highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <title>memcell - Rust</title>
+</head>
+
+<body>
+
+<div class="page-container">
+    <nav class="navbar">
+        <a><img src="assets/memcell.png" class="navbar-icon"></a>
+
+        <div class="navbar-right">
+            <a href="https://docs.rs/memcell/0.1.0/memcell/"><img src="https://docs.rs/rust-logo-20220918-1.66.0-nightly-a37499ae6.svg" alt="docs.rs page"></a>
+            <a href="https://crates.io/crates/memcell"><img src="https://crates.io/assets/Cargo-Logo-Small.png" alt="crates.io page"></a>
+            <a href="https://github.com/ImajinDevon/memcell"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub repository"></a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>memcell</h1>
+        <p><b>MemoryCell</b> implementation. Lite, documented, ready.</p>
+    </div>
+
+    <div align="center">
+        <h1>What is a MemoryCell?</h1>
+
+        <div class="container">
+            <p>MemoryCell is a struct containing both a current and optional previous value.</p>
+            <img src="https://github.com/ImajinDevon/memcell/actions/workflows/rust.yml/badge.svg" alt="GitHub workflow status" style="margin-top: 10px">
+
+            <h4>Definition</h4>
+
+            <pre>
+                <code class="language-rust">#[derive(Debug, Clone)]
+pub struct MemoryCell&lt;T&gt; {
+    current: T,
+    last_val: Option&lt;T&gt;,
+}</code>
+            </pre>
+
+            <h2>Features</h2>
+
+            <ul>
+                <li>Fully documented</li>
+                <li><b>const</b> methods</li>
+                <li>Lightweight</li>
+                <li><b>Zero</b> dependencies</li>
+                <li>Pure Rust</li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+<footer>
+    <p><a href="https://github.com/imajindevon">ImajinDevon</a></p>
+    <p>The memcell crate uses the MIT license.</p>
+    <p><sub><a href="https://choosealicense.com/licenses/mit/">Learn more.</a></sub></p>
+</footer>
+
+</body>
+
+</html>
