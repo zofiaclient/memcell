@@ -1,0 +1,13 @@
+[package]
+name = "memcell"
+version = "0.1.0"
+edition = "2021"
+authors = ["ImajinDevon", "Redempt"]
+license = "MIT"
+description = "A crate providing a MemoryCell struct, which stores a current and previous value."
+repository = "https://github.com/ImajinDevon/memcell"
+keywords = ["memory", "swap", "replace"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
