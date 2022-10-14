@@ -7,6 +7,7 @@ license = "MIT"
 description = "A crate providing a MemoryCell struct, which stores a current and previous value."
 repository = "https://github.com/ImajinDevon/memcell"
 keywords = ["memory", "swap", "replace"]
+categories = ["data-structures"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

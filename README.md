@@ -37,6 +37,6 @@ fn main() {
     cell.update(new_value);
 
     assert_eq!(cell.current(), &10);
-    assert_eq!(cell.last_val(), &Some(5));
+    assert_eq!(cell.last(), &Some(5));
 }
 ```

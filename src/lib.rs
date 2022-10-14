@@ -13,7 +13,7 @@ use std::mem;
 /// cell.update(new_value);
 ///
 /// assert_eq!(cell.current(), &10);
-/// assert_eq!(cell.last_val(), &Some(5));
+/// assert_eq!(cell.last(), &Some(5));
 /// ```
 #[derive(Debug, Clone)]
 pub struct MemoryCell<T> {
@@ -33,7 +33,7 @@ impl<T> MemoryCell<T> {
     /// cell.update(new_value);
     ///
     /// assert_eq!(cell.current(), &10);
-    /// assert_eq!(cell.last_val(), &Some(5));
+    /// assert_eq!(cell.last(), &Some(5));
     /// ```
     pub fn update(&mut self, new: T) {
         self.last_val = Some(mem::replace(&mut self.current, new));
@@ -124,9 +124,9 @@ impl<T> MemoryCell<T> {
     /// let mut cell = MemoryCell::new(5);
     /// cell.update(10);
     ///
-    /// assert_eq!(cell.last_val(), &Some(5));
+    /// assert_eq!(cell.last(), &Some(5));
     /// ```
-    pub const fn last_val(&self) -> &Option<T> {
+    pub const fn last(&self) -> &Option<T> {
         &self.last_val
     }
 
