@@ -1,5 +1,8 @@
 # memcell
 
+### Build & test status
+![Build and test status badge](https://github.com/ImajinDevon/memcell/actions/workflows/rust.yml/badge.svg)
+
 ## What is a MemoryCell?
 
 A `MemoryCell` is a struct containing both a **current** and optional **previous** value.
