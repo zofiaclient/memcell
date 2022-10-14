@@ -92,6 +92,13 @@ sub a {
     color: rgb(8, 168, 128)
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 10%);
+    margin: 30px 0;
+    outline: none;
+}
+
 a {
     color: rgb(255, 0, 64);
     text-decoration: none

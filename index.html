@@ -57,8 +57,26 @@ pub struct MemoryCell&lt;T&gt; {
                 <li><b>Zero</b> dependencies</li>
                 <li>Pure Rust</li>
             </ul>
+
+            <hr>
+
+            <h2>Example Usage</h2>
+
+<pre>
+    <code class="language-rust">use memcell::MemoryCell;
+
+fn main() {
+    let mut cell = MemoryCell::new(5_u32);
+
+    let new_value = 10;
+    cell.update(new_value);
+
+    assert_eq!(cell.current(), &10);
+    assert_eq!(cell.last(), &Some(5));
+}</code>
+</pre>
+
         </div>
-    
     </div>
 </div>
 
