@@ -1,6 +1,5 @@
 # memcell
 
-### Build & test status
 ![Build and test status badge](https://github.com/ImajinDevon/memcell/actions/workflows/rust.yml/badge.svg)
 
 ## What is a MemoryCell?
@@ -37,6 +36,6 @@ fn main() {
     cell.update(new_value);
 
     assert_eq!(cell.current(), &10);
-    assert_eq!(cell.last(), &Some(5));
+    assert_eq!(cell.last(), Some(&5));
 }
 ```

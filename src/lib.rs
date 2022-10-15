@@ -1,3 +1,31 @@
+//! # What is a [MemoryCell]?
+//!
+//! A `MemoryCell` is a struct containing both a **current** and optional **previous** value.
+//!
+//! ### Definition
+//!
+//! ```
+//! #[derive(Debug, Clone)]
+//! pub struct MemoryCell<T> {
+//!     current: T,
+//!     last_val: Option<T>,
+//! }
+//! ```
+//!
+//! # Example usage
+//!
+//! ```
+//! use memcell::MemoryCell;
+//!
+//! let mut cell = MemoryCell::new(5_u32);
+//!
+//! let new_value = 10;
+//! cell.update(new_value);
+//!
+//! assert_eq!(cell.current(), &10);
+//! assert_eq!(cell.last(), Some(&5));
+//! ```
+
 use std::mem;
 
 /// A cell containing a value ([T]), and the last (previous) value stored in the cell.
@@ -13,7 +41,7 @@ use std::mem;
 /// cell.update(new_value);
 ///
 /// assert_eq!(cell.current(), &10);
-/// assert_eq!(cell.last(), &Some(5));
+/// assert_eq!(cell.last(), Some(&5));
 /// ```
 #[derive(Debug, Clone)]
 pub struct MemoryCell<T> {
@@ -33,7 +61,7 @@ impl<T> MemoryCell<T> {
     /// cell.update(new_value);
     ///
     /// assert_eq!(cell.current(), &10);
-    /// assert_eq!(cell.last(), &Some(5));
+    /// assert_eq!(cell.last(), Some(&5));
     /// ```
     pub fn update(&mut self, new: T) {
         self.last_val = Some(mem::replace(&mut self.current, new));
@@ -124,10 +152,10 @@ impl<T> MemoryCell<T> {
     /// let mut cell = MemoryCell::new(5);
     /// cell.update(10);
     ///
-    /// assert_eq!(cell.last(), &Some(5));
+    /// assert_eq!(cell.last(), Some(&5));
     /// ```
-    pub const fn last(&self) -> &Option<T> {
-        &self.last_val
+    pub const fn last(&self) -> Option<&T> {
+        self.last_val.as_ref()
     }
 
     /// Create a new `MemoryCell` with the given value.
@@ -156,7 +184,7 @@ mod tests {
         let new_value = 10;
         cell.update(new_value);
 
-        assert_eq!(cell.current, new_value);
-        assert_eq!(cell.last_val, Some(old_value));
+        assert_eq!(cell.current(), &new_value);
+        assert_eq!(cell.last(), Some(&old_value));
     }
 }
