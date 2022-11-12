@@ -20,7 +20,7 @@ pub struct MemoryCell<T> {
 
 - Full documentation
 - Constant methods
-- Lightweight
+- Lightweight (~10kb)
 - Zero dependencies
 - Pure Rust
 
@@ -39,3 +39,5 @@ fn main() {
     assert_eq!(cell.last(), Some(&5));
 }
 ```
+
+[![Stargazers repo roster for @imajindevon/memcell](https://reporoster.com/stars/dark/imajindevon/memcell)](https://github.com/imajindevon/memcell/stargazers)
