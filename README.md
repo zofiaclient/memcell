@@ -1,6 +1,7 @@
-# memcell
-
-![Build and test status badge](https://github.com/ImajinDevon/memcell/actions/workflows/rust.yml/badge.svg)
+<div align="center">
+    <h1>memcell</h1>
+    <img src="https://github.com/ImajinDevon/memcell/actions/workflows/rust.yml/badge.svg" alt="Rust build status badge">
+</div>
 
 ## What is a MemoryCell?
 
